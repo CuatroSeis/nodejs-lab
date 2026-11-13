@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply bg-background text-text antialiased;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-text font-medium;
+  }
+
+  h1 {
+    @apply text-2xl tracking-tight;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  p {
+    @apply text-text-muted leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-button bg-primary text-background font-medium transition-colors hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-button border border-border text-text hover:bg-elevated transition-colors focus:outline-none focus:ring-2 focus-ring-secondary focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .card {
+    @apply rounded-card border border-border bg-surface p-6 shadow-card;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 rounded-button border border-border bg-background text-text placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary transition-colors;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-text-muted mb-1;
+  }
+}
+
+@layer utilities {
+  .surface {
+    background-color: var(--color-surface);
+  }
+
+  .elevated {
+    background-color: var(--color-elevated);
+  }
+
+  .border-custom {
+    border-color: var(--color-border);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .text-success {
+    color: var(--color-success);
+  }
+
+  .text-error {
+    color: var(--color-error);
+  }
+}

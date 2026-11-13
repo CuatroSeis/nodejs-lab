@@ -1,0 +1,62 @@
+/* Contenedor del editor de código (CodeMirror) */
+.code-editor-container {
+  height: 100%;
+  width: 100%;
+  min-height: 320px;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-card);
+  background-color: var(--color-background);
+  outline: none;
+  overflow: hidden;
+  display: block;
+}
+
+.cm-editor {
+  height: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cm-editor .cm-scroller {
+  font-family: var(--font-mono);
+}
+
+.cm-editor.cm-focused {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.cm-editor .cm-content {
+  padding: 1rem;
+}
+
+.cm-editor .cm-activeLine {
+  background-color: var(--color-elevated);
+}
+
+.cm-editor .cm-selectionBackground {
+  background-color: rgba(139, 207, 104, 0.3);
+}
+
+.cm-editor .cm-gutters {
+  background-color: var(--color-background);
+  border-right: var(--border-width) solid var(--color-border);
+}
+
+.cm-editor .cm-gutterElement {
+  padding: 0 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.cm-editor .cm-lineNumbers .cm-gutterElement {
+  padding: 0 0.75rem;
+}
+
+.cm-editor .cm-cursor {
+  border-left-color: var(--color-primary);
+}
+
+.cm-editor .cm-activeLineGutter {
+  background-color: var(--color-elevated);
+}
